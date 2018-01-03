@@ -24,7 +24,7 @@ const server            = require('http').Server(app);
 app.use('/', routes);
 
 const PORT = process.env.PORT || 8080;
-server.listen(8080, function() {
+server.listen(8080, function(error) {
   error
       ? console.error(error)
       : console.info(`==> 🌎 Listening on port ${PORT}!`);
