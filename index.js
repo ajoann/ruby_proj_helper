@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
 app.use('/', routes);
 
 const PORT = process.env.PORT || 8080;
-app.listen(8080, function(error) {
+app.listen(PORT, function(error) {
   error
       ? console.error(error)
       : console.info(`==> 🌎 Listening on port ${PORT}!`);
