@@ -23,6 +23,9 @@ const server            = require('http').Server(app);
 // WIDGET Routes
 app.use('/', routes);
 
+const PORT = process.env.PORT || 8080;
 server.listen(8080, function() {
-    console.log('server running on port 3000!');
+  error
+      ? console.error(error)
+      : console.info(`==> 🌎 Listening on port ${PORT}!`);
 });
