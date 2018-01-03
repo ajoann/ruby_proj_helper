@@ -16,15 +16,11 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-
-// START SOCKET SERVER STUFF
-const server            = require('http').Server(app);
-
 // WIDGET Routes
 app.use('/', routes);
 
 const PORT = process.env.PORT || 8080;
-server.listen(8080, function(error) {
+app.listen(8080, function(error) {
   error
       ? console.error(error)
       : console.info(`==> 🌎 Listening on port ${PORT}!`);
